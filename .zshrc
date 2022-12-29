@@ -52,9 +52,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 function finish {
+  cd ~/.config
   git acp "dot files"  
 }
 
 trap finish EXIT
 
-nohup git -C ~/ pull 2>&1 &
+nohup git -C ~/.config pull 2>&1 &
