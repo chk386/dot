@@ -1,0 +1,6 @@
+/nvim/plugin/packer_compiled.lua
+/yarn/**
+
+
+# Compiled Lua sources
+luac.out
