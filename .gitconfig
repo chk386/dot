@@ -1,1 +1,22 @@
-/Users/nhn/.gitconfig
+[user]
+  name = haekyu.cho 
+  email = haekyu.cho@nhn.com
+[init]
+  defaultBranch = main
+[alias]
+  acp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+[core]
+  editor = vi 
+  excludesfile = ~/.config/.gitignore_global
+  symlinks = true
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+[pull]
+  rebase = false
+
